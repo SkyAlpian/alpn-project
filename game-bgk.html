@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="in">
+<head>
+    
+    <title> Thanks vanh :v</title>
+    <link rel="stylesheet" type="text/css" href="style-bgk.css">
+</head>
+
+<body>
+    
+    <header>
+        <nav>
+            <a href="https://alpn.netlify.app/">
+                <img src="Logo.png" class="logo" alt="Logo ALPN">
+            </a>
+        </nav>
+    </header>
+    
+    <main>
+    
+    <div class="top">
+            <div class="beam"></div>
+            <a href="https://alpn.netlify.app/"><p>Profile</p></a>
+            <a href="index.html">
+                <p>List Content</p>
+            </a>
+            <p>Game Batu Gunting Kertas</p>
+        </div>
+        
+        <div class="line-border">
+            <div class="line"></div>
+        </div>
+    
+    <center>
+        <div class="c-area">
+            <h3>Computer</h3>
+            <center>
+                <img src="Tanya.jpg" class="c-img">
+            </center>
+        </div>
+        <div class="info">
+            <h4></h4>
+        </div>
+        <div class="p-area">
+            <h3>Player</h3>
+            <img src="Batu.jpg" class="Batu">
+            <img src="Gunting.jpg" class="Gunting">
+            <img src="Kertas.jpg" class="Kertas">
+        </div>
+    </center>
+    
+    <footer>
+        <div class="bottom">
+            <a href="https://instagram.com/sky_alpn?igshid=YmMyMTA2M2Y=">
+                <p>-----Contact-----</p>
+            </a>
+            <p>alpn.netlify.app</p>
+        </div>
+    </footer>
+    
+    <script>
+        
+        function getComputerChoice() {
+        const c = Math.round(Math.random() *2);
+            if (c === 0) return 'Batu';
+            if (c === 1) return 'Kertas';
+            return 'Gunting';
+        }
+
+        function getGameResults(c, p) {
+            if (p == c) return 'SERI';
+            if (p == 'Batu') return (c == 'Kertas') ? 'KALAH' : 'MENANG';
+            if (p == 'Gunting') return (c == 'Batu') ? 'KALAH' : 'MENANG';
+            if (p == 'Kertas') return (c == 'Gunting') ? 'KALAH' : 'MENANG';
+        }
+        
+        function random() {
+            const imgComputer = document.querySelector('.c-img');
+            let i = 0
+            const startTime = new Date().getTime();
+            const picture = ['Batu', 'Gunting', 'Kertas'];
+            setInterval(function () {
+            if (new Date().getTime() - startTime > 1000) {
+                clearInterval;
+                return;
+            }
+                imgComputer.setAttribute('src', picture[i++] + '.jpg');
+                if(i == 3) {
+                    i = 0
+                }
+            }, 100)
+        }
+        
+        const chooseRock = document.querySelector('.Batu');
+        chooseRock.addEventListener('click', function () {
+            const computerChoice = getComputerChoice();
+            const playerChoice = chooseRock.className;
+            const gameResults = getGameResults(computerChoice, playerChoice)
+            
+            random();
+            
+            setTimeout(function () {
+                const imgComputer = document.querySelector('.c-img');
+                imgComputer.setAttribute('src', computerChoice + '.jpg');
+            
+                const skor = document.querySelector('.info h4');
+                skor.innerHTML = gameResults;
+            }, 1000);
+        })
+        const chooseScissor = document.querySelector('.Gunting');
+        chooseScissor.addEventListener('click', function () {
+            const computerChoice = getComputerChoice();
+            const playerChoice = chooseScissor.className;
+            const gameResults = getGameResults(computerChoice, playerChoice)
+            
+            random();
+            
+            setTimeout(function () {
+                const imgComputer = document.querySelector('.c-img');
+                imgComputer.setAttribute('src', computerChoice + '.jpg');
+            
+                const skor = document.querySelector('.info h4');
+                skor.innerHTML = gameResults;
+            }, 1000);
+        })
+        const choosePaper = document.querySelector('.Kertas');
+        choosePaper.addEventListener('click', function () {
+            const computerChoice = getComputerChoice();
+            const playerChoice = choosePaper.className;
+            const gameResults = getGameResults(computerChoice, playerChoice)
+            
+            random();
+            
+            setTimeout(function () {
+                const imgComputer = document.querySelector('.c-img');
+                imgComputer.setAttribute('src', computerChoice + '.jpg');
+            
+                const skor = document.querySelector('.info h4');
+                skor.innerHTML = gameResults;
+            }, 1000);
+        })
+        
+    </script>
+    
+</body>
+</html>

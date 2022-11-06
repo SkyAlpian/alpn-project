@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F1F3FC;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #1BB15D;
+}
+
+.logo {
+    width: 265px;
+    margin: 15px;
+}
+
+.top {
+    height: 70px;
+    width: 100%;
+    display: inline-block;
+}
+
+.top .beam {
+    width: 7px;
+    height: 40px;
+    background: #1BB15D;
+    margin: 15px 3px 10px 30px;
+    border-radius: 2.5px;
+    float: left;
+}
+
+.top a p {
+    font-size: 30px;
+    margin-top: 15px;
+    float: left;
+    color: black;
+}
+
+.top p {
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.top p::before {
+    content: ">";
+    margin: 10px;
+}
+
+.line-border {
+    width: 94%;
+    margin: auto;
+}
+
+.line {
+    border: dashed black 0.1px;
+}
+
+.description p:first-child {
+    font-size: 35px;
+    text-align: center;
+}
+
+.description p:last-child {
+    font-size: 25px;
+    text-align: center;
+}
+
+.description p span {
+    padding: 15px;
+}
+
+.project-box {
+    background: white;
+    width: 95%;
+    margin: auto;
+    border-radius : 5px;
+    padding-bottom: 15px;
+}
+
+.project-box p {
+    color: #1BB15D;
+    font-size: 30px;
+    padding: 20px 0 0 20px;
+}
+
+.line-project {
+    border: dashed black 0.1px;
+    margin-top: 30px;
+}
+
+.list a p {
+    color: black;
+}
+
+.bottom a p {
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    padding: 45px 0px 0px 0px;
+}
+
+.bottom p {
+    text-align: center;
+    margin-top: -5px;
+}
