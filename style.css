@@ -92,6 +92,7 @@ header {
 
 .list a .project p {
     color: black;
+    font-size: 20px;
 }
 
 .bottom a p {
